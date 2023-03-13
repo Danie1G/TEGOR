@@ -7,7 +7,7 @@ class AccountMove(models.Model):
     _inherit = "account.move"
 
     
-    date_entry = fields.Date(related='stock_move_id.date_entry','fecha de Entrada',store=True)
+    date_entry = fields.Date(related='stock_move_id.date_entry', store=True)
 
 
     @api.model_create_multi
