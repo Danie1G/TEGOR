@@ -10,9 +10,9 @@ class StockPickingPalet(models.Model):
 
    
 
-class Stockmove(models.Model):
-    _name="stock.move"
+# class Stockmove(models.Model):
+#     _name="stock.move"
 
     
-    date_entry = fields.Date(related='picking_id.date_entry',store=True)
+#     date_entry = fields.Date(related='picking_id.date_entry',store=True)
 
