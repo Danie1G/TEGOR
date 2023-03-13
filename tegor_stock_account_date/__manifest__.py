@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 {
-    "name": "Sale Pallets",
+    "name": "Tegor - date_entry",
     "version": "16.0.0.0.1",
     "license": "AGPL-3",
     "summary": "Extension de modulo de Stock y account",
