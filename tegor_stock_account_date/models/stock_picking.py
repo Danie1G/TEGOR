@@ -11,23 +11,8 @@ class StockPickingPalet(models.Model):
    
 
 class Stockmove(models.Model):
-    _name="stock.move"
+    _inherit="stock.move"
 
     
-    date_entry = fields.Date('Fecha Entrada', compute='compute_date_entry')
-
-
-    @api.depends('picking_id')
-    def compute_date_entry(self):
-
-        for record in self:
-
-            if record.picking_id.date_entry:
-                record.date_entry = record.picking_id.date_entry
-            else:
-                record.date_entry = False
-
-
-
-
-
+    date_entry = fields.Date('Fecha Entrada', related='picking_id.date_entry', store=True)
+    
