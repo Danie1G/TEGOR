@@ -28,6 +28,7 @@ class AccountMove(models.Model):
 
         for record in self:
             if record.date_entry:
+                raise ValidationError(date_entry)
                 record.date = record.date_entry
 
         return res
