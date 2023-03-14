@@ -7,6 +7,7 @@ class StockPickingPalet(models.Model):
     _inherit = "stock.picking"
 
     date_entry = fields.Date('Fecha de Entrada')
+    date_entry_check = fields.Boolean('Fecha Recepcion?')
 
    
 

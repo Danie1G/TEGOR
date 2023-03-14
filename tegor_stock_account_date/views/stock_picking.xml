@@ -7,7 +7,8 @@
         <field name="arch" type="xml">
 
             <field name="origin" position="after">
-                <field name="date_entry" />
+                <field name="date_entry_check" />
+                <field name="date_entry" attrs="{'invisible': [('date_entry_check', '=', False)]}"/>/>
             </field>
 
         </field>

@@ -20,3 +20,9 @@ class AccountMove(models.Model):
                 rec.date = rec.date_entry
         
         return res_ids
+
+
+    def write(self, vals):
+        if vals.get('date_entry'):
+            vals['date'] = vals.get('date_entry')
+        return super(AccountMove, self).write(vals)
