@@ -26,7 +26,7 @@ class AccountMove(models.Model):
     def write(self, vals):
         res = super(AccountMove, self).write(vals)
 
-        for record in res:
+        for record in self:
             if record.date_entry:
                 record.date = record.date_entry
 
