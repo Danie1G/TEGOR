@@ -27,8 +27,9 @@ class AccountMove(models.Model):
         res = super(AccountMove, self).write(vals)
 
         for record in self:
+            raise ValidationError(date_entry)
             if record.date_entry:
-                raise ValidationError(date_entry)
+
                 record.date = record.date_entry
 
         return res
