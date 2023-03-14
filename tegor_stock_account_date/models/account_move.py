@@ -24,10 +24,12 @@ class AccountMove(models.Model):
 
 
     def write(self, vals):
+
+        raise ValidationError(date_entry)
         res = super(AccountMove, self).write(vals)
 
         for record in self:
-            raise ValidationError(date_entry)
+
             if record.date_entry:
 
                 record.date = record.date_entry
