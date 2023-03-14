@@ -24,7 +24,7 @@ class AccountMove(models.Model):
     #     return res_ids
 
 
-    @api.depends('invoice_date', 'company_id')
+    @api.depends('invoice_date', 'company_id','date_entry')
     def _compute_date(self):
         for move in self:
             if move.date_entry:
