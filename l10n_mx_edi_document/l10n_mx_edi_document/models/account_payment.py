@@ -170,7 +170,10 @@ class AccountPayment(models.Model):
             return None
         attribute = "//pago10:DoctoRelacionado"
         namespace = {"pago10": "http://www.sat.gob.mx/Pagos"}
+        namespace20 = {"pago10": "http://www.sat.gob.mx/Pagos20"}
         node = cfdi.Complemento.xpath(attribute, namespaces=namespace)
+        if not node:
+            node = cfdi.Complemento.xpath(attribute, namespaces=namespace20)
         return node
 
     def _get_edi_document_errors(self):
