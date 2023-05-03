@@ -6,9 +6,11 @@
         <field name="inherit_id" ref="stock.view_picking_form" />
         <field name="arch" type="xml">
 
+
             <field name="origin" position="after">
                 <field name="date_entry_check" attrs="{'invisible': [('picking_type_code', '!=', 'incoming')]}"/>
-                <field name="date_entry" attrs="{'invisible': [('date_entry_check', '=', False)]}"/>
+                <field name="date_entry" attrs="{'invisible': [('date_entry_check', '=', False)],  'readonly': [('state','=','done')]}"/>
+
             </field>
 
         </field>

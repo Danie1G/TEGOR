@@ -10,6 +10,7 @@ class StockPickingPalet(models.Model):
     date_entry = fields.Date('Fecha de Entrada')
     date_entry_check = fields.Boolean('Fecha Recepcion?')
 
+
    
 
 class Stockmove(models.Model):
