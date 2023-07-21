@@ -18,7 +18,7 @@ class SaleOrder(models.Model):
                 ordered_qty = line.product_uom_qty
 
                 
-                stock_available = self.env['stock.quant'].serach([
+                stock_available = self.env['stock.quant'].search([
                     ('product_id','=',product.id),
                     ('location_id','=',location)])
 
