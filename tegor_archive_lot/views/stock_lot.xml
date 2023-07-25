@@ -8,9 +8,25 @@
 
 
             <field name="ref" position="after">
-                <field name="active"/>
+                <field name="active" invisible="True"/>
 
             </field>
+
+        </field>
+    </record>
+
+
+    <record id="view_product_lot_search_extension" model="ir.ui.view">
+        <field name="name">stock.lot.search</field>
+        <field name="model">stock.lot</field>
+        <field name="inherit_id" ref="stock.search_product_lot_filter" />
+        <field name="arch" type="xml">
+
+
+            <xpath expr="//search" position="inside">
+                <filter string="Archivado" name="active" domain="[('active', '=', False )]" />
+                <filter string="Activo" name="active" domain="[('active', '=', True )]" />
+            </xpath>
 
         </field>
     </record>
