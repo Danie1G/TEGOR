@@ -23,8 +23,11 @@
     'depends': ['base', 'point_of_sale'],
     'assets': {
         'point_of_sale.assets': [
-            'delivery_pos_checked/static/src/js/models.js'
+            'delivery_pos_checked/static/src/js/models.js',
+            'delivery_pos_checked/static/src/xml/PaymentScreen.xml'
         ],
+
+
     },
 
 
