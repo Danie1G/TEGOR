@@ -6,8 +6,9 @@
     "license": "AGPL-3",
     "summary": "Extension de modulo de Stock y account",
     "author": "Centricital",
-    "depends": ["account","stock"],
+    "depends": ["account","stock",'base'],
     "data": [
+        "security/ir.model.access.csv",
         "views/stock_picking.xml",
         "wizard/date_wizard.xml",
     
