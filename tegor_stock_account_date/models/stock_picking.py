@@ -11,13 +11,12 @@ class StockPickingPalet(models.Model):
 
 
     def open_date_wizard(self):
-        self.ensure_one()
+
         return {
             'type': 'ir.actions.act_window',
             'name': 'Seleccionar Fecha',
             'res_model': 'date.wizard',
             'view_mode': 'form',
-            'view_type': 'form',
             'target': 'new',
             'context': {'default_stock_picking_id': self.id},
         }
