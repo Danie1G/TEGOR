@@ -26,23 +26,4 @@ class AccountMove(models.Model):
                     record.date = record.date_entry
                     record._compute_amount()
                     record._onchange_date()
-                    
-
-    @api.depends('invoice_date', 'company_id','date_entry')
-    def _compute_date(self):
-        for move in self:
-            if move.date_entry:
-                move.date = move.date_entry
-            else:
-                if not move.invoice_date:
-                    if not move.date:
-                        move.date = fields.Date.context_today(self)
-                    continue
-                accounting_date = move.invoice_date
-                if not move.is_sale_document(include_receipts=True):
-                    accounting_date = move._get_accounting_date(move.invoice_date, move._affect_tax_report())
-                if accounting_date and accounting_date != move.date:
-                    move.date = accounting_date
-                    # might be protected because `_get_accounting_date` requires the `name`
-                self.env.add_to_compute(self._fields['name'], move)
     

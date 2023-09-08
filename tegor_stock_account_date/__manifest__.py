@@ -9,6 +9,7 @@
     "depends": ["account","stock"],
     "data": [
         "views/stock_picking.xml",
+        "wizard/date_wizard.xml",
     
     ],
     "application": False,
