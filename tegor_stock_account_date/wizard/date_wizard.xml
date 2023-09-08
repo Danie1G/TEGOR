@@ -5,6 +5,11 @@
         <field name="model">date.wizard</field>
         <field name="arch" type="xml">
             <form string="Seleccionar Fecha">
+                <group>
+                    <group>
+                        <field name="date_field"/>
+                    </group>
+                </group>
                 <field name="date_field"/>
                 <footer>
                     <button string="Aplicar" type="object" name="apply_date" class="btn-primary"/>
