@@ -13,7 +13,7 @@
 
             <field name="origin" position="after">
                 <field name="date_entry_check" attrs="{'invisible': [('picking_type_code', '!=', 'incoming')]}"/>
-                <field name="date_entry" attrs="{'invisible': [('date_entry_check', '=', False)],  'readonly': [('state','=','done')]}"/>
+                <field name="date_entry" attrs="{'invisible': [('date_entry_check', '=', False)],  'readonly': True"/>
 
             </field>
 

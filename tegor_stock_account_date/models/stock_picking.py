@@ -10,7 +10,6 @@ class StockPickingPalet(models.Model):
     date_entry = fields.Date('Fecha de Entrada')
 
 
-    @api.multi
     def action_open_date_wizard(self):
         return {
             'type': 'ir.actions.act_window',
