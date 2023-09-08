@@ -9,9 +9,7 @@ class StockPickingPalet(models.Model):
 
     date_entry = fields.Date('Fecha de Entrada')
 
-
     def open_date_wizard(self):
-
         return {
             'type': 'ir.actions.act_window',
             'name': 'Seleccionar Fecha',
@@ -20,4 +18,3 @@ class StockPickingPalet(models.Model):
             'target': 'new',
             'context': {'default_stock_picking_id': self.id},
         }
-
