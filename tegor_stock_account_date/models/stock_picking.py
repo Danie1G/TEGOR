@@ -10,7 +10,8 @@ class StockPickingPalet(models.Model):
     date_entry = fields.Date('Fecha de Entrada')
 
 
-    def action_open_date_wizard(self):
+    def open_date_wizard(self):
+        self.ensure_one()
         return {
             'type': 'ir.actions.act_window',
             'name': 'Seleccionar Fecha',
