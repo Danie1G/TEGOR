@@ -8,14 +8,13 @@ class StockPickingPalet(models.Model):
     _inherit = "stock.picking"
 
     date_entry = fields.Date('Fecha de Entrada')
-    date_entry_check = fields.Boolean('Fecha Recepcion?')
 
-
-   
-
-class Stockmove(models.Model):
-    _inherit="stock.move"
-
-    
-    date_entry = fields.Date('Fecha Entrada', related='picking_id.date_entry', store=True)
-    
+    def open_date_wizard(self):
+        return {
+            'type': 'ir.actions.act_window',
+            'name': 'Seleccionar Fecha',
+            'res_model': 'date.wizard',
+            'view_mode': 'form',
+            'target': 'new',
+            'context': {'default_stock_picking_id': self.id},
+        }
