@@ -66,7 +66,7 @@
     </template>
     <!-- Hide buy now button if "Buy Now Button" option is enabled and not website_show_price -->
     <template id="product_buy_now" inherit_id="website_sale.product_buy_now">
-        <xpath expr="//a[hasclass('o_we_buy_now')]" position="attributes">
+        <xpath expr="//a[hasclass('btn btn-outline-primary o_we_buy_now ms-1 #{'btn-lg' if ctaSizeBig else ''}')]" position="attributes">
             <attribute name="t-if">
                 website.website_show_price and not product.website_hide_price
             </attribute>
