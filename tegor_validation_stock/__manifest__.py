@@ -5,6 +5,11 @@
     'category': 'Sales',
     'summary': 'Extension del modulo de ventas',
     'license': 'OPL-1',
+    "data": [
+        
+        "views/product.xml",
+    
+    ],
 
     # Author
     'author': 'Centricital',
