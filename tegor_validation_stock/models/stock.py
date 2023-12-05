@@ -16,7 +16,7 @@ class StockPicking(models.Model):
             if stock.picking_type_code in ['outgoing','internal']:
                 location = stock.location_id.id
                 for line in stock.move_line_ids_without_package:
-                    if not line.product_id.is_kit:
+                    if not line.product_id.product_tmpl_id.is_kit:
                         product = line.product_id
                         ordered_qty = line.qty_done
 

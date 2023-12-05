@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-	<record model="ir.ui.view" id="product_template_form_view_optional">
-		<field name="name">product.product.kit</field>
-		<field name="model">product.product</field>
-		<field name="inherit_id" ref="product.product_normal_form_view"/>
-		<field name="arch" type="xml">
 
-			<div name="options" position="inside">
+	<record id="view_form_kit" model="ir.ui.view">
+        <field name="name">product.template.form</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view"/>
+        <field name="arch" type="xml">
+            
+            <div name="options" position="inside">
                 <span class="d-inline-block">
                     <field name="is_kit"/>
                     <label for="is_kit"/>
                 </span>
                 
             </div>
-		</field>
-	</record>
+
+        </field>
+    </record>
 
 </odoo>
+
