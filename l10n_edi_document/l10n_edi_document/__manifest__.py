@@ -9,26 +9,8 @@
     "website": "https://www.vauxoo.com",
     "license": "LGPL-3",
     "category": "Operations/Documents/Accounting",
-    "version": "16.0.1.0.0",
-    "depends": [
-        "account",
-        "documents",
-    ],
-    "test": [],
-    "data": [
-        "data/data.xml",
-    ],
-    "demo": [],
-    "assets": {
-        "web.assets_backend": [
-            "/l10n_edi_document/static/src/sass/widget.scss",
-            "/l10n_edi_document/static/src/js/checks_widget.js",
-            "/l10n_edi_document/static/src/js/checklist_animation.js",
-        ],
-        "web.assets_qweb": [
-            "/l10n_edi_document/static/src/xml/checks_widget.xml",
-        ],
-    },
+    "version": "17.0.1.0.0",
+    
     "installable": True,
     "auto_install": False,
 }
