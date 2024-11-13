@@ -2,7 +2,7 @@
 
 {
     "name": "Tegor - Lot",
-    "version": "16.0.0.0.1",
+    "version": "17.0.0.0.1",
     "license": "AGPL-3",
     "summary": "Extension de modulo de Stock ",
     "author": "Centricital",

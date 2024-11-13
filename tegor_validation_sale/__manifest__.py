@@ -1,10 +1,10 @@
 {
     # App information
     'name': 'Tegor Validation Sale Order',
-    'version': '16.0.1',
+    "version": "17.0.0.0.1",
+    "license": "AGPL-3",
     'category': 'Sales',
     'summary': 'Extension del modulo de ventas',
-    'license': 'OPL-1',
 
     # Author
     'author': 'Centricital',
