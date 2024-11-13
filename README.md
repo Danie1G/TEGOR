@@ -1,1 +1,1 @@
-# TEGOR 
+# TEGOR   
